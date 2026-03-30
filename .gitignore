@@ -1,0 +1,49 @@
+# --- Environnements Python (jamais versionner) ---
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# --- Cache & compilés ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- Données & modèles (lourds / reproductibles ailleurs) ---
+# Jeu d'images ~15k fichiers — trop volumineux pour GitHub
+data/
+
+# Poids Keras — souvent > 100 Mo (limite GitHub) ; réentraîner ou Git LFS si besoin
+models/*.keras
+models/*.h5
+models/*.pb
+models/*.pkl
+models/*.joblib
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# --- Streamlit (secrets locaux) ---
+.streamlit/secrets.toml
+app/.streamlit/secrets.toml
+
+# --- Logs ---
+*.log
