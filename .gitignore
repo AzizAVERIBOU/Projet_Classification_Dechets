@@ -23,16 +23,14 @@ build/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# --- Données & modèles (lourds / reproductibles ailleurs) ---
-# Jeu d'images ~15k fichiers — trop volumineux pour GitHub
+# --- Données ---
+# Jeu d'images (~15k fichiers) — trop volumineux pour le dépôt ; à placer localement dans data/
 data/
 
-# Poids Keras — souvent > 100 Mo (limite GitHub) ; réentraîner ou Git LFS si besoin
-models/*.keras
+# Artefacts d'entraînement optionnels (garder models/*.keras versionné pour l'app)
 models/*.h5
-models/*.pb
-models/*.pkl
-models/*.joblib
+models/checkpoints/
+models/wandb/
 
 # --- IDE / OS ---
 .vscode/
